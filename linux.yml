@@ -9,7 +9,3 @@
       command: cat /etc/system-release
       register: login
     - debug: msg="{{ login.stdout }}"
-    - name: Get OS info 10.0.3.8
-      command: cat /etc/system-release
-      register: login
-    - debug: msg="{{ login.stdout }}"
