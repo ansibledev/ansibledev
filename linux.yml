@@ -7,9 +7,4 @@
     - debug: msg="{{ login.stdout }}"
     - set_fact:
         companyname: "{{ login.stdout }}"
-    - name: pause 10 sec
-      command: sleep 10
-    - debug:
-        var: companyname
-    - name: "create file on tmp"
-      file: path=/tmp/{{ companyname }} state=touch
+        companyname: "{{ login.stdout }}"
