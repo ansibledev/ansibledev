@@ -7,10 +7,3 @@
     - debug: msg="{{ login.stdout }}"
     - name: Get OS info 10.0.3.8
       command: cat /etc/system-release
-      register: login
-    - debug: msg="{{ login.stdout }}"
-<<<<<<< HEAD
-new line
-=======
-    test
->>>>>>> 1c17abe6219ab53f6ebf7dd6314d97f30e821417
