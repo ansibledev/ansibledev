@@ -5,15 +5,3 @@
       command: cat /etc/system-release
       register: login
     - debug: msg="{{ login.stdout }}"
-    - set_fact:
-<<<<<<< HEAD
-        companyname: "{{ login.stdout }}"
-=======
-        companyname: "{{ login.stdout }}"
-    - name: pause 10 sec
-      command: sleep 10
-    - debug:
-        var: companyname
-    - name: "create file on tmp"
-      file: path=/tmp/{{ companyname }} state=touch
->>>>>>> parent of 03bd72a... Update linux.yml
