@@ -7,4 +7,3 @@
     - debug: msg="{{ login.stdout }}"
     - set_fact:
         companyname: "{{ login.stdout }}"
-        companyname: "{{ login.stdout }}"
