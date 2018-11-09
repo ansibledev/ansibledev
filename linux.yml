@@ -1,0 +1,15 @@
+- name: Print linux distribution and version
+  hosts: all
+  tasks:
+    - name: Get OS info 10.0.3.8
+      command: cat /etc/system-release
+      register: login
+    - debug: msg="{{ login.stdout }}"
+    - set_fact:
+        companyname: "{{ login.stdout }}"
+    - name: pause 10 sec
+      command: sleep 10
+    - debug:
+        var: companyname
+    - name: "create file on tmp"
+      file: path=/tmp/{{ companyname }} state=touch
