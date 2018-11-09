@@ -9,3 +9,4 @@
       command: cat /etc/system-release
       register: login
     - debug: msg="{{ login.stdout }}"
+new line
